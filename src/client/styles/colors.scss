@@ -1,0 +1,50 @@
+$mobile: 760px;
+//WEATHER ICONS STYLING
+.cloud-showers-heavy {
+    color: #15AABF;
+  }
+  
+  .sun {
+    color: #fffb00;
+  }
+  
+  .snowflake {
+    color: #748181;
+  }
+  
+  .wind {
+    color: #4dfff6;
+  }
+  
+  .smog {
+    color: #858585;
+  }
+  
+  .cloud {
+    color: #272727;
+  }
+  
+  .cloud-rain {
+    color: #0000ff;
+  }
+  
+  .fa-thermometer-half {
+    color: rgb(245, 146, 18);
+  }
+  
+  .fa-calendar-alt {
+    color: #141212;
+  }
+  
+  @media (max-width: $mobile) {
+    .customMeteo {
+      margin: 0;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  
+    .card{
+      width: 100%;
+      margin: 0;
+    }
+  }

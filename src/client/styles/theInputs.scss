@@ -1,0 +1,179 @@
+$pd-title-color: #30D5c8;
+$pd-title-bg: rgba(100, 100, 100, 0);
+$pd-picker-bg: rgba(255, 255, 255, 0.63);
+$pd-day-bg: rgba(255,255,255,.8);
+$pd-day-hover-bg:#30D5c8;
+$pd-day-today-color: black;
+$pd-day-selected-bg: #30D5c8;
+$pd-day-selected-shadow: transparent;
+@import 'pikaday/scss/pikaday.scss';
+
+//Variables
+$contrast-color:#30D5c8;
+$my-titles:rgb(129, 129, 129);
+$font:'Chelsea Market', cursive;
+$mobile: 760px;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  color: white;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.customTitle{
+  text-align: center;
+  font-size: 4em;
+  line-height: 1;
+  text-transform: uppercase;
+  color:$my-titles;
+}
+.myDatePicker{
+  display: flex;
+  flex-direction: column;
+}
+.myDestination{
+  display: flex;
+  flex-direction: column;
+}
+.mySubmit{
+ display: flex;
+ justify-content: center;
+}
+/** Form **/
+.form {
+  border: 3px solid $contrast-color; 
+  width: calc(100% - 45px);
+  box-shadow: 4px 6px 22px -4px rgba(0,0,0,0.36);
+  
+  
+  .small-title {
+    padding: 20px;
+    margin: 0;
+  }
+  
+
+}
+
+.customInput {
+  padding: 30px 20px;
+  border-top: 2px solid white;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  box-sizing: border-box;
+  color:$contrast-color; 
+} 
+
+.input {
+  background: none;
+  position: relative;
+  padding: 8px 12px 5px 0;
+  border: 0;
+  border-bottom: 2px solid black;
+  color: $contrast-color;
+  font-family: $font;
+  opacity: 1;
+  font-size: 1em;
+  font-weight: 400;
+
+  &:focus {
+    outline: 0;
+
+    & + label {
+      transform: translateY(-30%);
+      font-size: 80%;
+    }
+  } 
+
+  &:valid + label {
+    transform: translateY(-30%);
+    font-size: 80%;
+  }
+}
+
+.button{
+  margin: 30px 0px;
+  font-family: $font;
+  font-weight: 700;
+  border: .5px solid transparent;
+  background: $contrast-color;
+  padding: 15px 35px 15px 35px; 
+  cursor: pointer;
+  text-transform: uppercase;
+  color:white;
+  
+  
+
+  &:hover{
+    background: $contrast-color;
+    color:white;
+    box-shadow: 4px 6px 22px -4px rgba(0,0,0,0.36);
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+  }
+}
+
+@media (max-width: $mobile) {
+  .title {
+    margin: 30px 0 20px 0;
+  }
+
+  .form {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .customInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px 0 0 0;
+
+    > div {
+      width: 100%;
+      margin: 20px 0;
+      padding:0x 10px;
+
+      .input {
+        width: 100%;
+      }
+    }
+  }
+
+  .button {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .customInput > div {
+    width: calc(50% - 8px);
+
+    .input {
+      width: 100%;
+    }
+
+    &:last-of-type {
+      margin-left: 16px;
+    }
+  }
+
+  .button {
+    margin-top: 30px;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1030px) {
+  .form {
+    margin: 0 30px 10px 15px;
+  }
+}

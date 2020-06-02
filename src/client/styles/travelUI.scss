@@ -1,0 +1,98 @@
+$my-titles:rgb(129, 129, 129);
+$mobile: 760px;
+$contrast-color:#30D5c8;
+
+.customMeteo {
+  display: flex;
+  justify-content: center;
+  color: black;
+  flex-wrap: wrap;
+  margin: 70px 0 0 30px;
+
+  .myMeteoContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    position: relative;
+    margin: auto;
+  }
+}
+
+.contentTop {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0;
+  width: 80%;
+  height: 215px;
+  margin: auto;
+
+  .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .days {
+    position: absolute;
+    text-align: center;
+    background: $contrast-color;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(30%, -30%);
+    background: $contrast-color;
+    border: 0;
+    outline: 0;
+    color: white;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+  
+    .fas {
+      pointer-events: none;
+      position: relative;
+    }
+  }
+}
+
+.card-bottom {
+  width: 80%;
+  margin: auto;
+
+  .place {
+    border-bottom: 2px solid $contrast-color;
+    color: $my-titles;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  
+    h2, h3 {
+      margin: 0;
+      font-weight: 400; 
+    }
+  
+    h3 {
+      opacity: .5;
+      margin-bottom: 10px;
+    }
+  }
+
+  .customInfo {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0px;
+  }
+}
